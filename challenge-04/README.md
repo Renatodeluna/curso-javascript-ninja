@@ -116,7 +116,7 @@ carro.adicionarPessoas = (n) => {
     if((carro.quantidadePessoas + n) > carro.assentos) {
         const pessoasRestao = carro.assentos - carro.quantidadePessoas;
 
-        if(carro.quantidadePessoas === 5) {
+        if(carro.quantidadePessoas === carro.assentos) {
             return "O carro já está lotado!";
         }
 
@@ -125,11 +125,11 @@ carro.adicionarPessoas = (n) => {
     else {
         carro.quantidadePessoas += n;
 
-        if(carro.quantidadePessoas < 5) {
+        if(carro.quantidadePessoas < carro.assentos) {
             return "Já temos " + carro.quantidadePessoas + " pessoas no carro!";
         }
 
-        if(carro.quantidadePessoas === 5) {
+        if(carro.quantidadePessoas === carro.assentos) {
             return "O carro já está lotado!";
         }
     } 
